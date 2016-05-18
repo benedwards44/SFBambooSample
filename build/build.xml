@@ -15,7 +15,7 @@
 			serverurl="${env.bamboo_serverurl}" 
 			maxPoll="500"
 			pollWaitMillis="50000" 
-			deployRoot="${src.dir}/src"
+			deployRoot="${src.dir}"
 			testLevel="${env.bamboo_testLevel}" 
 			checkOnly="${env.bamboo_checkOnly}"
 		/>
