@@ -1,2 +1,2 @@
-# SFBamboo
-Sample project for deployment repositories to Salesforce using Bamboo
+# BambooSalesforce
+Sample project for deploying repositories to Salesforce using Bamboo
