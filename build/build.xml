@@ -1,7 +1,9 @@
 <project name="Demo build.xml for Salesforce Deploy using Bamboo" basedir=".." xmlns:sf="antlib:com.salesforce">
 
-	<!-- Build properties -->
-	<property name="src.dir" value="${basedir}/src" />
+	<!-- Define the task def and reference to .jar file -->
+	<taskdef uri="antlib:com.salesforce"
+        resource="com/salesforce/antlib.xml"
+        classpath="${basedir}/build/ant-salesforce.jar"/>
 
 	<property environment="env" />
 
@@ -14,9 +16,9 @@
 			username="${env.bamboo_username}" 
 			password="${env.bamboo_password}"
 			serverurl="${env.bamboo_serverurl}" 
-			maxPoll="500"
-			pollWaitMillis="50000" 
-			deployRoot="${src.dir}"
+			maxPoll="100"
+			pollWaitMillis="100000" 
+			deployRoot="${basedir}/src"
 			testLevel="${env.bamboo_testLevel}" 
 			checkOnly="${env.bamboo_checkOnly}"
 		/>
