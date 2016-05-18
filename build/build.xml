@@ -1,0 +1,26 @@
+<project name="Demo Bamboo build.xml" basedir="." xmlns:sf="antlib:com.salesforce">
+
+	<!-- Build properties -->
+	<property name="src.dir" value="../src" />
+	<property environment="env" />
+
+	<!-- Build targets definitions -->
+	<target name="deploy">
+
+	    <echo>SFDC Deployment Started!</echo>
+
+		<sf:deploy 
+			username="${env.bamboo_username}" 
+			password="${env.bamboo_password}"
+			serverurl="${env.bamboo_serverurl}" 
+			maxPoll="50"
+			pollWaitMillis="50000" 
+			deployRoot="${src.dir}/src"
+			testLevel="${env.bamboo_testLevel}" 
+			checkOnly="${env.bamboo_checkOnly}"
+		/>
+
+	</target>
+
+
+</project>
