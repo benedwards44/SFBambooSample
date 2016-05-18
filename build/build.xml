@@ -13,7 +13,7 @@
 			username="${env.bamboo_username}" 
 			password="${env.bamboo_password}"
 			serverurl="${env.bamboo_serverurl}" 
-			maxPoll="50"
+			maxPoll="500"
 			pollWaitMillis="50000" 
 			deployRoot="${src.dir}/src"
 			testLevel="${env.bamboo_testLevel}" 
