@@ -1,13 +1,14 @@
-<project name="Demo Bamboo build.xml" basedir="." xmlns:sf="antlib:com.salesforce">
+<project name="Demo build.xml for Salesforce Deploy using Bamboo" basedir=".." xmlns:sf="antlib:com.salesforce">
 
 	<!-- Build properties -->
-	<property name="src.dir" value="../src" />
+	<property name="src.dir" value="${basedir}/src" />
+
 	<property environment="env" />
 
 	<!-- Build targets definitions -->
 	<target name="deploy">
 
-	    <echo>SFDC Deployment Started!</echo>
+	    <echo level="info">SFDC Deployment Started!</echo>
 
 		<sf:deploy 
 			username="${env.bamboo_username}" 
